@@ -52,7 +52,7 @@ abstract class EasyCache{
 	}
 }
 
-class CacheBackendDoesntExist extends exception{}
-class CacheFrontendDoesntExist extends exception{}
+class CacheBackendDoesntExist extends \exception{}
+class CacheFrontendDoesntExist extends \exception{}
 
 ?>
