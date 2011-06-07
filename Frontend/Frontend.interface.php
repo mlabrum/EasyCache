@@ -4,6 +4,7 @@
  * @license Beerware
  * @link url
  */
+namespace EasyCache;
 interface Cache_Frontend{
 
 	/**

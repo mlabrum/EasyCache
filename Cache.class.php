@@ -5,7 +5,7 @@
  * @license Beerware
  * @link url
  */
-namespace URLRouter;
+namespace EasyCache;
 abstract class EasyCache{
 
 	/**
@@ -14,7 +14,7 @@ abstract class EasyCache{
 	* @param string $frontend
 	* @param array $backendOptions
 	* @param array $frontendOptions
-	* @return Router
+	* @return FrontendCache
 	*/
 	static public function Create($backend, $frontend, Array $backendOptions, Array $frontendOptions){
 		
@@ -24,8 +24,8 @@ abstract class EasyCache{
 		$backendClassName = "Backend_" . $backend;
 		$frontendClassName = "Frontend_" . $frontend;
 		
-		$backendFile =  $backendDirectory . $backendClassName . ".php";
-		$frontendFile =  $frontendDirectory . $frontendClassName . ".php";
+		$backendFile =  $backendDirectory . $backendClassName . ".class.php";
+		$frontendFile =  $frontendDirectory . $frontendClassName . ".class.php";
 		
 		if(file_exists($backendFile)){
 			if(file_exists($frontendFile)){
